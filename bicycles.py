@@ -29,4 +29,5 @@ class Customer(object):
     def buy(self, bike):
         self.fund -= 1.2*(bike.cost)
         self.garage.append(bike)
+        print("\n" +bike.model)
     

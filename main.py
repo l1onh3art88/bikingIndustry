@@ -64,6 +64,7 @@ if __name__ == '__main__':
 #the bike shop has made
     
     for y in bikeshop.inventory:
+        print("\n")
         print(y.model)
     
     bikeshop.balance()
