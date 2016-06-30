@@ -14,6 +14,13 @@ class BikeShop(object):
         self.profit = profit
     
     def sell(self, bike):
+        
+        """ 
+        Sells a bike 
+        Adds to the shops profit by subtracting the price the bike is being
+        sold at from the cost to manufacture the bike
+        The bike is then removed from the inventory of the bikeshop
+        """
         self.profit += (1.2*(bike.cost)-(bike.cost)) 
         self.inventory.remove(bike)
     
@@ -27,6 +34,12 @@ class Customer(object):
         self.garage = []
     
     def buy(self, bike):
+        """
+        Buys a bike, subtracts the price the bike is being sold at from the
+        customer's fund.
+        Bike is then appended to the garage array to store the bike
+        Method ends buy printing the sold bike's model
+        """
         self.fund -= 1.2*(bike.cost)
         self.garage.append(bike)
         print("\n" +bike.model)
